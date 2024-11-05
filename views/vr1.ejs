@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Akio's portfolio 1</title>
+    <style>
+      .spacing {padding: 15px;}
+
+      .bg-orange {background-color: orange}
+      .text-color-black {color: black}
+      p {font-family: GAME; font-size: 20px;}
+
+      body, html {margin: 0;padding: 0;height: 100%;overflow-y: auto;}
+      .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
+      .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
+
+      body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+      canvas{ display: block; } 
+
+      .video-container {width: 80%;max-width: 800px; margin: 0 auto; display: flex; justify-content: center; opacity: 100; position: relative; z-index: 2; padding-top: 5%;}
+
+      #particles-js{ position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+
+      .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: black; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } 
+      .js-count-particles{ font-size: 1.1em; }
+      #stats, .count-particles{ --user-select: none; margin-top: 5px; margin-left: 5px; }
+      #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
+      .count-particles{ border-radius: 0 0 3px 3px; }
+      .no_cursor {cursor: none;}
+      .cursor {
+          position: fixed;
+          width: 30px;
+          height: 30px;
+          border: 3px solid rgba(245, 245, 245, 0.8);
+          border-radius: 50%;
+          background: rgba(245, 245, 245, 0.1);
+          pointer-events: none;
+          mix-blend-mode: difference;
+          z-index: 9999;
+          transition: transform 0.15s ease;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <%- include('partials/navbar') %>
+    <div id="particles-js" class="no_cursor"></div>
+
+    <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
+        <h2 class="card-title d-flex justify-content-center">Jail break</h2>
+        <p class="card-text d-flex justify-content-center"> Created using Unity for my End-Semester_Examination(ESE)</p>
+    </div> 
+
+    <div class="video-container no_cursor">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9txSMpKwzqA"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <br><br><br>
+
+    <div class="card justify-content-center container-fluid no_cursor" style="width:1000px; height:4000px">
+      <div class="d-flex justify-content-center">
+      </div>
+      <div class="card-body">
+        <h3>Objective of this Game:</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+          The objective of this game is to escape from prison while solving math questions and finding the right answer and button to escape. 
+          Upon pressing the wrong button would results to opening the wrong door which in turn causes oneself to land into the lava pit. 
+          Opening the right doors allows one to advance to the next stage. 
+        </p>
+        <br>
+        <h3>Game play & Room Design:</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+          There are four different stages thus four different rooms, each room has similiar math puzzles but same objectives.
+          Each room with different designs and struture. Let me go thru each of the room designs.
+          <br><br>
+          Room 1:
+          <br>
+          This room is made to look like a shared room with 4 prisoners. 
+          Each beds have a button with the 'correct' number.
+          However, the button for the answer 8 isnt on the bed and that is because it is placed behind the painting that is beside the beds with the number 7 & 8.
+          The walls behind the painting is sticky and thus able to climb on it to 'hide' from the police officers.
+          After pressing the button behind the painting, the player would advance to the next room.
+          I tried to design the first room to have the vibes of the starting point to escape prison.
+          Hence, the beds in the first room.
+          I also placed the painting as shown below to show that some prisoners would hang their 'posters' to hide from the hole they are digging but as they were digging it, the walls become sticky.
+          Hence the sticky walls behind the painting
+          <br>
+          <div class="card"><img class="icon-links" src=Room1painting.png alt="Card image"></div>
+          <br><br> 
+          <p>Room 2:<br>
+          Upon entering the 2nd room, the player would see on his/her left side the number of tables and buttons there.
+          Numbers that states from 1-12 have been assigned with each buttons there with instructions that says "Choose your button"
+          On his/her right side, the player woudl see a smaller cell with two people, one tall and one short person along with two table beside them.
+          There has the sentence that says "Which do you think is the answer?"
+          Same as the first room, pressing the wrong button would result into opening the wrong door with the lava pit.
+          However, pressing the right button will advance you to the next room.
+          The idea that I had was that the player has escaped from his/her cell and it is in the corriders now trying to past through the door tthat holds all the other cells and inmates.
+          That's why you would see the two other inmates that are in their cells as shown below.</p>
+          <div class="card"><img class="icon-links" src=Room2people.png alt="Card image"></div> 
+          <br>
+          <p>The idea of having 12 buttons is to confuse and delay the player. 
+          Some people would have a hard time with the math questions and cause of that, they would spam the buttons to make sure that it is the right one.
+          However, the purpose of a jail break is so that you can be free and quickly leave the place.
+          So if the player were to try all 12 buttons, they would probably get caught by the police officers on duty.
+          Thats why there are 12 buttons.</p>
+          <br><br>
+          <p>Room 3:
+          <br>
+          Very similar to Room 2 where there are inmates in cells and a 'desk' with four buttons and a number assigned to them.
+          Just that this time on the players left side, instead of just inmates in one cell, there is also a lamp in the other cell as shown in the video(Time: 2:42).
+          Similar to the first two rooms, thte player would need to press the correct button in order to advance. 
+          However this time, instead of opening the correct door, he/she would open tthe cell with the lamp in it.
+          In front of the cell is instructions on what to do with the lamp.
+          Instructions states that "It opens one of the cells. An object is used to open the answer door instead."
+          The player would then have to use the lamp to open the door in order to move on to the next door as shown below.</p>
+          <div class="card"><img class="icon-links" src=Room3lamptest.png alt="Card image"></div>
+          <div class="card"><img class="icon-links" src=Room3lamptest2.png alt="Card image"></div>
+          <br>
+          <p>The idea/design of this room was to imitate an actual prison canteen with cells that are directly in front of the canteen.
+          I want the player to think that we are close to escaping the prison but yet the challenges get harder tthe further you advance.
+          In addition to that, since the challenges will get harder as the player advance, I also want to let the player feel that not all buttons are going to open the door.
+          Sometimes you would need to be violent to open up the door cell in order to advance.
+          Hence the use of grabbing the lamp.
+          <br><br>
+          Room 4:
+          <br>
+          I would say that this room I have difficulty with it as instead on pressing one button to open the door, you need to press two buttons, one of them is blended into the surrounding along with the moving of the lamp to open the door
+          Once the player enters the room, he/she would see that the bars has close up the doors to escape. 
+          On their right, they will see the same desk in differentt colour with 4 buttons assigned with a number.
+          On their left, they will see one huge cell wiht a desk and a drawer in it.
+          In this room, there is lots of different instructions all over the room with one of them stating "The lamp would be useful for later"(Time:5:29).
+          Upon pressing the correct button, they will open up the cell door and they will see a set of instructions stating "Find the correct button. There are two buttons"(Time:5:06).
+          After pressing the correct button, they will open up the correct bar door and they would have to bring back the lamp from room 3 to open the final door.
+          After entering the last door, they are free the prison with the words in front of the exit congratualating them as shown below.</p>
+          <div class="card"><img class="icon-links" src=Room4exit.png alt="Card image"></div>
+          <br>
+          <p>The design rationale here is to show that one room can have multiple puzzles to solve and you would need to think fast in order tot advance. 
+          Even if things gets too hard, there are some things worth risking for. 
+          Just like this prison escape, as there are many puzzles to solve, if you want something, you have to do it, whether easy or hard. 
+          Thats why there are so many puzzles to solve. 
+          However, this room doesn't have any inmates as it is close to the end already.
+          Usually when you are reaching to the end of the exit, you won't see inmates or prisoners near the exit door.
+          Thats why there isnt any inmates.
+          </p>
+        </p>
+        <br>
+        <h3>Game Inspiration:</h3>
+        <p class="card-text d-flex justify-content-center">
+          <p>The idea of the jail break came from one of the few movies that I watch.
+          One of the movies that motivated me was this movie: "The Great Escape" where it all happen during the World War II (WW2).
+          It was also based on a true story!
+          So the inspiration of the game Jail break came from some of the few movies I watch.
+          While the inspiration of solving math questions came from this game called the baldy basics.</p>
+          <div class="card"><img class="icon-links" src=Baldy.png alt="Card image"></div>
+          <p>The character which is shown above is the teacher who teaches math in class. 
+          However, if you were to get wrong for at least one of his questions, he will start to get mad and start chasing you around the school.
+          while trying to run from him and escape the school, you have to find math notebooks and textbooks to solve and learn math questions and equations in order to advance.
+          Otherwise, he will start chasing you and start to 'kill' you. 
+          So that is where the inspiration of solving math questions top advance came from.
+          By combining both inspirations together, I created this game.
+          </p>
+        </p>
+        <br><br><br><br><br>
+        <h3 class="card-title d-flex justify-content-center">Thats all for Jail Break</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">If there is anything you would want to share to me, do contact me at my contact page.</p>
+        <br>
+        <p class="card-text d-flex justify-content-center">Thank you!</p>
+      </div>
+
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+      <script>
+          particlesJS("particles-js", {
+              "particles": {
+                  "number": { "value": 100, "density": { "enable": true, "value_area": 800 }},
+                  "color": { "value": ['#800080', '#8B0000', '#FFA500' ]},
+                  "shape": { "type": "image", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 },
+                  "image": {"src":"Gamerlogo.png","width":100,"height":100}},    
+                  "opacity": { "value": 1, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }},
+                  "size": { "value": 15, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }},
+                  "line_linked": { "enable": false, "distance": 500, "color": "#ffffff", "opacity": 0.4, "width": 2 },
+                  "move": { "enable": true, "speed": 0.5, "direction": "random", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }}
+              },
+              "interactivity": {
+                  "detect_on": "canvas",
+                  "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true },
+                  "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 0.5 }}, "bubble": { "distance": 400, "size": 4, "duration": 0.3, "opacity": 1, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 }}
+              },
+              "retina_detect": true
+          });
+  
+          var count_particles, stats, update;
+          stats = new Stats();
+          stats.setMode(0);
+          stats.domElement.style.position = 'absolute';
+          stats.domElement.style.left = '0px';
+          stats.domElement.style.top = '0px';
+          document.body.appendChild(stats.domElement);
+          count_particles = document.querySelector('.js-count-particles');
+          update = function() {
+              stats.begin();
+              stats.end();
+              if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                  count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+              }
+              requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+      </script>
+    <script>
+      $(document).ready(function() {
+          console.log("jQuery is loaded.");
+  
+          var cursor = $(".cursor");
+  
+          $(window).mousemove(function(e) {
+              cursor.css({
+                  top: e.clientY - cursor.height() / 2,
+                  left: e.clientX - cursor.width() / 2
+              });
+              console.log("Mouse move detected"); 
+          });
+  
+          $(".test-link").mouseenter(function() {
+              cursor.css({
+                  transform: "scale(2)"
+              });
+              console.log("Link hover in"); 
+          }).mouseleave(function() {
+              cursor.css({
+                  transform: "scale(1)"
+              });
+              console.log("Link hover out");
+          });
+  
+          $(window).mousedown(function() {
+              cursor.css({
+                  transform: "scale(0.5)"
+              });
+              console.log("Mouse down");
+          }).mouseup(function() {
+              cursor.css({
+                  transform: "scale(1)"
+              });
+              console.log("Mouse up");
+          });
+      });
+  </script>
+
+</body>
+</html>

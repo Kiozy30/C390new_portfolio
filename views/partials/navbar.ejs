@@ -1,0 +1,54 @@
+<style>
+    .navbar { display: flex; align-items: center; justify-content: space-between; position: relative;top: 0;width: 100%;}
+    .icon-links { display: flex; justify-content: center; }
+    .icon-links img { width: 50px; height: auto; }
+    .logo img { width: 50px; height: auto; margin-top: -3px; }
+    .navbar-nav { display: flex; align-items: center; gap: 15px; }
+    .divider-container-parallax { display: flex; align-items: center; justify-content: center; }
+    .no_cursor { cursor: none; }
+    .bg-red { background-color: red; }
+    .sticky {position: fixed; top: 0; width: 100%;z-index: 1000;}
+</style>
+
+<div id="navbar" class="sticky-navbar">
+    <nav class="navbar navbar-expand-sm bg-red navbar-dark breakpoint-parallax">
+        <div class="container-fluid">
+            <div class="logo navbar-nav ms-auto">
+                <a class="no_cursor" href="/">
+                    <img src="Gamerlogo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link no_cursor" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no_cursor" href="/#section2">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link no_cursor" href="/#section3">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.getElementById("navbar");
+        const aboutme = document.getElementById("aboutme");
+
+        // Get the offset position of the "About Me" section from the top of the document
+        const aboutmeTop = aboutme.offsetTop;
+
+        // Add sticky class when scrolled past the "About Me" section
+        if (window.pageYOffset >= aboutmeTop) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    });
+</script>
+
+     

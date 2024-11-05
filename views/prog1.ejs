@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Akio's portfolio 1</title>
+    <style>
+      .spacing {padding: 15px;}
+      .bg-orange {background-color: orange}
+      .text-color-black {color: black}
+      p {font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;}
+      .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
+
+      body, html {margin: 0;padding: 0;height: 100%;overflow-y: auto;}
+      .video-container {width: 80%;max-width: 800px; margin: 0 auto; display: flex; justify-content: center; opacity: 100; position: relative; z-index: 2; padding-top: 5%;}
+            
+      .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
+
+      body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+      canvas{ display: block; } 
+ 
+      #particles-js { position: absolute; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+      .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
+      .js-count-particles { font-size: 1.1em; }
+      #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
+
+      .no_cursor {cursor: none;}
+      .cursor {
+          position: fixed;
+          width: 30px;
+          height: 30px;
+          border: 3px solid rgba(245, 245, 245, 0.8);
+          border-radius: 50%;
+          background: rgba(245, 245, 245, 0.1);
+          pointer-events: none;
+          mix-blend-mode: difference;
+          z-index: 9999;
+          transition: transform 0.15s ease;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <%- include('partials/navbar') %>
+    <div id="particles-js" class="no_cursor"></div>
+
+    <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
+        <h2 class="card-title d-flex justify-content-center">The Legends shop</h2>
+        <p class="card-text d-flex justify-content-center"> Created using JavaScript, HTML, CSS for my CA2.</p>
+    </div> 
+
+    <div class="video-container no_cursor">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/qhCybWnYk0k"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <br><br><br>
+
+    <div class="card justify-content-center container-fluid no_cursor" style="width:1000px; height:2000px">
+      <div class="d-flex justify-content-center">
+      </div>
+      <div class="card-body">
+        <h3>Programming Language and </h3>
+        <h3>other databases/external resources used:</h3>
+        <br><br><br>
+        <p class="card-text d-flex justify-content-center"> JavaScript</p>
+        <p class="card-text d-flex justify-content-center"> Express Javascript</p>
+        <p class="card-text d-flex justify-content-center"> HTML</p>
+        <p class="card-text d-flex justify-content-center"> CSS</p>
+        <p class="card-text d-flex justify-content-center"> phpMyAdmin</p>
+        <p class="card-text d-flex justify-content-center"> Render</p>
+        <br>
+        <h3>App Idea and Target Audiences:</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center"> 
+          The Idea of this shop was ot sell diamonds for the Mobile legends(ML) game. 
+          A platform where hte users can browse and search for the amount of diamonds they want and purchased with ease. 
+          The sales for the diamonds start from 30 diamonds and it increases till 100,000 diamonds. 
+          In addition to original diamonds, there is add-on diamonds so that it will be worthwhile for both customers and sellers
+          Of course for all my Mobile Legends customers who is looking tot buy diamonds with a cheaper price and a better budget, you are in luck!
+          Also there is a about page for interested and curious people to check out and learn more about Mobile legends and what I play in ML.
+        </p>
+        <br><br>
+        <h3>Why choose an online gaming shop?</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+          For a long time, I have been obssessed with ML itself. 
+          All the strategies and gameplay has facinated me a bunch.
+          So when there are events that happens in ML, i would usually be excited for it.
+          For example: "Ducati Event", "Attack of Titan", "Jujutsu Kaisen", etc.
+          However, in order to get this limited-time event skins, you require diamonds.
+          And diamonds are quite expensive in the game itself!
+          Check out how expensive the diamonds is in the game itself!</p>
+          <br>
+          <div class="card"><img class="icon-links" src=diamonds.png alt="Card image"></div>
+          <br>
+          <p>So I would usually go to a supplier to purchase cheaper diamonds.
+          However, I dont really like to offers they give in their shops as well as it is either not affordable or not worthwhile.
+          So that is why I would choose an online gaming shop.
+        </p>
+        <br><br>
+        <h3>What are its functions?</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">
+          <ul>
+            <li><p>Function 1: There will be different amounts of diamonds ranging from 30 diamonds to 100,000 diamonds and there would be bonus diamonds the more diamonds you purchase(as stated in App idea).</p></li> 
+            <li><p>Function 2: Entering the names, email, and other details before purchasing.</p></li>
+            <li><p>Function 3: Choosing the different methods of purchase.</p></li>
+            <li><p>Function 4: Shows a little details about the game itself with the different heroes and would bring you their details.</p></li>
+            <li><p>Functions 5: Shows details about me and to fill up a form if there is a need to share/report.</p></li>
+          </ul>
+        </p>
+        <br><br><br><br><br><br>
+        <h3 class="card-title d-flex justify-content-center">Thats all for the Legends shop</h3>
+        <br>
+        <p class="card-text d-flex justify-content-center">If there is anything you would want to share to me, do contact me at my contact page.</p>
+        <br>
+        <p class="card-text d-flex justify-content-center">Thank you!</p>
+      </div>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 }},
+                "color": { "value": ['#800080', '#8B0000', '#FFA500' ]},
+                "shape": { "type": "image", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 },
+                "image": {"src":"Gamerlogo.png","width":100,"height":100}},    
+                "opacity": { "value": 1, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }},
+                "size": { "value": 15, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }},
+                "line_linked": { "enable": false, "distance": 500, "color": "#ffffff", "opacity": 0.4, "width": 2 },
+                "move": { "enable": true, "speed": 0.5, "direction": "random", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }}
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true },
+                "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 0.5 }}, "bubble": { "distance": 400, "size": 4, "duration": 0.3, "opacity": 1, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 }}
+            },
+            "retina_detect": true
+        });
+
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+    <script>
+        $(document).ready(function() {
+            console.log("jQuery is loaded.");
+
+            var cursor = $(".cursor");
+
+            $(window).mousemove(function(e) {
+                cursor.css({
+                    top: e.clientY - cursor.height() / 2,
+                    left: e.clientX - cursor.width() / 2
+                });
+                console.log("Mouse move detected"); 
+            });
+
+            $(".test-link").mouseenter(function() {
+                cursor.css({
+                    transform: "scale(2)"
+                });
+                console.log("Link hover in"); 
+            }).mouseleave(function() {
+                cursor.css({
+                    transform: "scale(1)"
+                });
+                console.log("Link hover out");
+            });
+
+            $(window).mousedown(function() {
+                cursor.css({
+                    transform: "scale(0.5)"
+                });
+                console.log("Mouse down"); 
+            }).mouseup(function() {
+                cursor.css({
+                    transform: "scale(1)"
+                });
+                console.log("Mouse up"); 
+            });
+        });
+    </script>
+    <script>
+      $(document).ready(function() {
+          console.log("jQuery is loaded.");
+  
+          var cursor = $(".cursor");
+  
+          $(window).mousemove(function(e) {
+              cursor.css({
+                  top: e.clientY - cursor.height() / 2,
+                  left: e.clientX - cursor.width() / 2
+              });
+              console.log("Mouse move detected"); 
+          });
+  
+          $(".test-link").mouseenter(function() {
+              cursor.css({
+                  transform: "scale(2)"
+              });
+              console.log("Link hover in"); 
+          }).mouseleave(function() {
+              cursor.css({
+                  transform: "scale(1)"
+              });
+              console.log("Link hover out");
+          });
+  
+          $(window).mousedown(function() {
+              cursor.css({
+                  transform: "scale(0.5)"
+              });
+              console.log("Mouse down");
+          }).mouseup(function() {
+              cursor.css({
+                  transform: "scale(1)"
+              });
+              console.log("Mouse up");
+          });
+      });
+  </script>
+    
+</body>
+</html>
