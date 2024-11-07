@@ -13,7 +13,8 @@
       .bg-orange {background-color: orange}
       .text-color-black {color: black}
       p {font-family: GAME; font-size: 20px;}
-
+      .btn-red { border-color: red; color: white; }
+      .btn-red:hover { background-color: red; }
       body, html {margin: 0;padding: 0;height: 100%;overflow-y: auto;}
       .content {position: relative;z-index: 1;color: white;text-align: center;padding: 20px;}
       .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
@@ -52,7 +53,7 @@
     <div id="particles-js" class="no_cursor"></div>
 
     <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
-        <h2 class="card-title d-flex justify-content-center">Jail break</h2>
+        <h2 id="title"class="card-title d-flex justify-content-center">Jail break</h2>
         <p class="card-text d-flex justify-content-center"> Created using Unity for my End-Semester_Examination(ESE)</p>
     </div> 
 
@@ -174,6 +175,8 @@
         <p class="card-text d-flex justify-content-center">If there is anything you would want to share to me, do contact me at my contact page.</p>
         <br>
         <p class="card-text d-flex justify-content-center">Thank you!</p>
+        <br><br><br><br><br>
+        <a href="#title" class=" btn btn-red d-flex justify-content-center no_cursor">Proceed</a>
       </div>
 
       <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

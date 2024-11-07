@@ -13,7 +13,8 @@
       .text-color-black {color: black}
       p {font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;}
       .icon-links { display: flex; justify-content: center; gap: 60px; height: 250px;}
-
+      .btn-red { border-color: red; color: white; }
+      .btn-red:hover { background-color: red; }
       body, html {margin: 0;padding: 0;height: 100%;overflow-y: auto;}
       .video-container {width: 80%;max-width: 800px; margin: 0 auto; display: flex; justify-content: center; opacity: 100; position: relative; z-index: 2; padding-top: 5%;}
             
@@ -48,7 +49,7 @@
   <%- include('partials/navbar') %>
     <div id="particles-js" class="no_cursor"></div>
 
-    <div class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
+    <div id="title" class="card d-flex justify-content-center align-items-center container-fluid no_cursor" style="width: 1000px;">
         <h2 class="card-title d-flex justify-content-center">The Legends shop</h2>
         <p class="card-text d-flex justify-content-center"> Created using JavaScript, HTML, CSS for my CA2.</p>
     </div> 
@@ -120,6 +121,8 @@
         <p class="card-text d-flex justify-content-center">If there is anything you would want to share to me, do contact me at my contact page.</p>
         <br>
         <p class="card-text d-flex justify-content-center">Thank you!</p>
+        <br><br><br><br><br><br>
+        <a href="#title" class=" btn btn-red d-flex justify-content-center no_cursor">Proceed</a>
       </div>
     </div>
 

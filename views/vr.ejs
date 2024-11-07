@@ -24,7 +24,8 @@
         .count-particles { background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 0.8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; }
         .js-count-particles { font-size: 1.1em; }
         #stats, .count-particles { margin-top: 5px; margin-left: 5px; }
-
+        .project {color: #ff474c}
+        .project:hover {background-color: red; color: white;}
         .no_cursor {cursor: none;}
         .cursor {
             position: fixed;
@@ -45,7 +46,7 @@
     <div id="particles-js" class="no_cursor"></div>
     <div class="cursor"></div>
     <table class="table no_cursor">
-        <%- include('partials/navbar') %>
+        <%- include('partials/navbar') %> 
         <thead>
             <tr>
                 <th></th>
@@ -60,7 +61,7 @@
                             <h1 class="card-body d-flex justify-content-center">Jail Break</h1><br>
                             <h4 class="card-body d-flex justify-content-center">VR Escape Game</h4><br>
                             <p class="card-body d-flex justify-content-center"><img src=JailRoom.png style="width:400px;"></p>
-                            <a class="card-body no_cursor d-flex justify-content-center" href="/vr1">Find out more</a>
+                            <a class="card-body no_cursor d-flex justify-content-center project" href="/vr1">Find out more</a>
                         </div>
                     </div>
                 </td>
@@ -69,7 +70,7 @@
                         <div>
                             <h1 class="card-body d-flex justify-content-center"></h1><br>
                             <h4 class="card-body d-flex justify-content-center"></h4><br>
-                            <a class="card-body d-flex justify-content-center" href="/vr2"></a>
+                            <a class="card-body d-flex justify-content-center project" href="/vr2"></a>
                         </div>
                     </div>
                 </td>
