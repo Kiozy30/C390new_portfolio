@@ -1,54 +1,71 @@
 <style>
+    /*Navbar*/
     .navbar { display: flex; align-items: center; justify-content: space-between; position: relative;top: 0;width: 100%;}
-    .icon-links { display: flex; justify-content: center; }
-    .icon-links img { width: 50px; height: auto; }
-    .logo img { width: 50px; height: auto; margin-top: -3px; }
     .navbar-nav { display: flex; align-items: center; gap: 15px; }
-    .divider-container-parallax { display: flex; align-items: center; justify-content: center; }
-    .no_cursor { cursor: none; }
-    .bg-red { background-color: #8b0000; }
     .sticky {position: fixed; top: 0; width: 100%;z-index: 1000;}
+    /* Image */
+    .logo img { width: 50px; height: auto; margin-top: -3px; }
+    /* container*/
+    .divider-container-parallax { display: flex; align-items: center; justify-content: center; }
+    /* cursor*/
+    .no_cursor { cursor: none; }
+    /* background*/
+    .bg-red { background-color: #8b0000; }
+    /* sidebar menu*/
+    .hamburger-menu {width: 30px;height: 25px;display: flex;flex-direction: column;justify-content: space-between;}
+    .hamburger-menu div:hover {color: #fff}
+    .hamburger-menu div {width: 100%;height: 5px;background-color: grey;border-radius: 2px;}
+    /* overlaying*/
+    .overlay {height: 100%;width: 100%;position: fixed;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.9);overflow: hidden;transition: 0.5s;display: none;z-index: 1000; }
+    .overlay-content {position: relative;top: 50%;transform: translateY(-50%);text-align: center;}
+    .overlay-content a {padding: 8px;text-decoration: none;font-size: 50px;color: #ccc;display: block;transition: 0.3s;}
+    .overlay-content a:hover {color: #ff0000;}
+    /* close button*/
+    .closebtn {position: absolute;top: 20px;right: 45px;font-size: 60px;color: white;text-decoration: none;}
+    .closebtn:hover{color: #ff0000;}
 </style>
 
 <div id="navbar" class="sticky-navbar">
     <nav class="navbar navbar-expand-sm bg-red navbar-dark breakpoint-parallax no_cursor">
-        <div class="container-fluid">
-            <div class="logo navbar-nav ms-auto">
-                <a class="no_cursor" href="/">
+        <div class="container-fluid"> 
+            <div class="logo navbar-nav">
+                <a class="no_cursor test-link" href="/">
                     <img src="Gamerlogo.png" alt="Logo">
                 </a>
             </div>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link no_cursor" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link no_cursor" href="/#section2">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link no_cursor" href="/#section3">Contact</a>
-                    </li>
-                </ul>
+            <div class="hamburger-menu no_cursor test-link" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </nav>
 </div>
+<div id="overlay" class="overlay no_cursor">
+    <a href="javascript:void(0)" class="closebtn no_cursor test-link" id="closeOverlay">&times;</a>
+    <div class="overlay-content">
+        <a class="nav-link no_cursor test-link" href="/about">About</a>
+        <a class="nav-link no_cursor test-link" href="/#section2">Projects</a>
+        <a class="nav-link no_cursor test-link" href="/#section3">Contact</a>
+    </div>
+</div>
+
 <script>
     window.addEventListener("scroll", function() {
         const navbar = document.getElementById("navbar");
         const aboutme = document.getElementById("aboutme");
-
-        // Get the offset position of the "About Me" section from the top of the document
         const aboutmeTop = aboutme.offsetTop;
 
-        // Add sticky class when scrolled past the "About Me" section
         if (window.pageYOffset >= aboutmeTop) {
             navbar.classList.add("sticky");
         } else {
             navbar.classList.remove("sticky");
         }
     });
+    document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("overlay").style.display = "block";
+    });
+    document.getElementById("closeOverlay").addEventListener("click", function () {
+        document.getElementById("overlay").style.display = "none";
+    });
 </script>
-
-     
